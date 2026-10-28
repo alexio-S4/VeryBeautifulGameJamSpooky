@@ -6,7 +6,10 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("[SETTINGS]")]
     [SerializeField] private float _movementSpeed = 5f;
+    [SerializeField] private float _interactMaxTime = 3f;
+
     [Header("[SPRITES TYPES]")]
     [SerializeField] private Sprite _spriteFront;
     [SerializeField] private Sprite _spriteBack;
@@ -16,6 +19,10 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _moveInputs;
     private SpriteRenderer _spriteRenderer;
     private bool _wantToInteract = false;
+    private InteractUI _interactUI;
+
+    private float _interactingTime; 
+
 
     private void Awake()
     {
@@ -23,11 +30,14 @@ public class PlayerMovement : MonoBehaviour
         { _rigidbody = GetComponent<Rigidbody2D>(); }
         if (_spriteRenderer == null)
         { _spriteRenderer = GetComponentInChildren<SpriteRenderer>(); }
+
+        if(_interactUI == null) { _interactUI = GetComponentInChildren<InteractUI>();}
     }
 
     private void Update()
     {
         SwitchSprite();
+        UpdateInteract();
     }
 
     private void FixedUpdate()
@@ -43,15 +53,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void InteractInputCallback(InputAction.CallbackContext context)
     {
-        if (context.performed)
-        {
-            Debug.Log("Interact performed");
-        }
-        if (context.canceled)
-        {
-            Debug.Log("Interact canceled");
-            _wantToInteract = false;
-        }
 
         if (context.started)
         {
@@ -59,6 +60,13 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Started");
             Interact();
         }
+
+        if (context.canceled)
+        {
+            Debug.Log("Interact canceled");
+            _wantToInteract = false;
+        }
+
     }
 
     private void SwitchSprite()
@@ -80,5 +88,25 @@ public class PlayerMovement : MonoBehaviour
     private void Interact()
     {
         Debug.Log("Try interact");
+        // If I can interact with...
+        _interactingTime = 0f;
+        _interactUI.Progress(0f);
+        _interactUI.Show();
+    }
+
+    private void UpdateInteract()
+    {
+        if (!_wantToInteract) return;
+
+        _interactingTime += Time.deltaTime;
+        _interactUI.Progress(_interactingTime / _interactMaxTime);
+
+        if (_interactingTime >= _interactMaxTime)
+        {
+            _wantToInteract = false;
+            _interactingTime = 0f;
+            _interactUI.Progress(0f);
+            _interactUI.Hide();
+        }
     }
 }
