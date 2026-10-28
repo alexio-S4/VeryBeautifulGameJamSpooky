@@ -597,6 +597,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   _movementSpeed: 3
+  _spriteFront: {fileID: -263741460897661097, guid: a59d98559832bff4bb54c107aa0a65d0, type: 3}
+  _spriteBack: {fileID: 4944106115907874708, guid: a59d98559832bff4bb54c107aa0a65d0, type: 3}
+  _spriteSide: {fileID: 7847974730232294768, guid: a59d98559832bff4bb54c107aa0a65d0, type: 3}
 --- !u!1 &1914438021
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,8 +681,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2720922381176439266, guid: 467c660a86a92bb4cbdbaf731d86034c, type: 3}
-  m_Color: {r: 0.42075467, g: 0.46601346, b: 1, a: 1}
+  m_Sprite: {fileID: -263741460897661097, guid: a59d98559832bff4bb54c107aa0a65d0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
