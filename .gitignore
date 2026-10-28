@@ -1,0 +1,54 @@
+# Dossiers générés par Unity
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# Captures de mémoire et enregistrements 
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Fichiers autogénérés par Visual Studio
+.vs/
+.gradle/
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Fichiers meta générés pour les fichiers ignorés
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Rapports de crash Unity
+sysinfo.txt
+
+# Fichiers de build
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Plugins autogénérés
+/[Aa]ssets/Plugins/Editor/JetBrains*
+
+# Addressables et Assets Android temporaires
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
