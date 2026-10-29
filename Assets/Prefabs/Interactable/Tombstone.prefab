@@ -252,6 +252,7 @@ GameObject:
   - component: {fileID: 6185034773578669754}
   - component: {fileID: 50107793172511149}
   - component: {fileID: 4965580426683654847}
+  - component: {fileID: 8454672018268176767}
   m_Layer: 0
   m_Name: Tombstone
   m_TagString: Untagged
@@ -397,3 +398,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &8454672018268176767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7954084756960155365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae7662e6db21c0408f9500fb6e996b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TaskObject
+  taskType: 3
+  dirtySprite: {fileID: 3407572862762948867, guid: 1ee225a939664834994aee492001a3bb, type: 3}
+  cleanSprite: {fileID: 5711544432380875350, guid: 8967be3b0c5a7854dbfb927f5748e688, type: 3}
