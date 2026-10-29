@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FillBarUI : MonoBehaviour
+public class InteractUI : MonoBehaviour
 {
     [SerializeField] private Image[] _images;
     private void Awake()
