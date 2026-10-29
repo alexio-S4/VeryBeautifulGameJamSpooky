@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GameManagerCOPYPauline : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     public static int totalInteractionsCount = 0;
 

@@ -24,15 +24,14 @@ public class InteractableObject : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Debug.Log("capte player");
-
-
             PlayerMovement player = collision.GetComponent<PlayerMovement>();
+
             if (player != null)
             {
                 player.SetCurrentInteractable(this);
             }
 
-            if(promptUI != null && GameManagerCOPYPauline.totalInteractionsCount < 3)
+            if(promptUI != null && GameManager.totalInteractionsCount < 3)
             {
                 promptUI.SetActive(true);
             }
@@ -58,9 +57,9 @@ public class InteractableObject : MonoBehaviour
 
     public void OnInteracted()
     {
-        if(GameManagerCOPYPauline.totalInteractionsCount < 3)
+        if(GameManager.totalInteractionsCount < 3)
         {
-            GameManagerCOPYPauline.totalInteractionsCount++;
+            GameManager.totalInteractionsCount++;
         }
 
         if(promptUI != null)
