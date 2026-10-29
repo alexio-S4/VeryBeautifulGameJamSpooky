@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public enum GoalPhase { None, Pause, InProgress, Checked }
-public enum GoalType { None, Candle, Flower, Grave, Leaf }
+public enum GoalType { None, Candle, Flower, Grave, Leaf, Cut, Grass, Light }
 
 public class Goal : MonoBehaviour
 {
