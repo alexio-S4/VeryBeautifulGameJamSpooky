@@ -65,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Interact canceled");
             _wantToInteract = false;
+            _interactUI.Progress(0f);
         }
 
     }
