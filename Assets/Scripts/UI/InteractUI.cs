@@ -3,17 +3,31 @@ using UnityEngine.UI;
 
 public class InteractUI : MonoBehaviour
 {
-    [SerializeField] private Image _image;
+    [SerializeField] private Image[] _images;
     private void Awake()
     {
-        if (_image == null) { _image = GetComponentInChildren<Image>(); }
+        if (_images == null) { _images = GetComponentsInChildren<Image>(); }
     }
 
-    public void Show() => _image.gameObject.SetActive (true);
-    public void Hide() => _image.gameObject.SetActive (false);
+    public void Show()
+    {
+        foreach (var img in _images)
+        {
+            img.gameObject.SetActive(true);
+        }
+    }
+
+    public void Hide()
+    {
+        foreach (var img in _images)
+        {
+            img.gameObject.SetActive(false);
+        }
+    }
+
 
     public void Progress(float value)
     {
-        _image.fillAmount = Mathf.Clamp01(value);
+        _images[1].fillAmount = Mathf.Clamp01(value);
     }
 }

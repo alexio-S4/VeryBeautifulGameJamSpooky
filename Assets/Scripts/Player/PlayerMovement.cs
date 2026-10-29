@@ -46,6 +46,8 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
+    /// --- CALLBACKS INPUTS
+
     public void MoveInputCallback(InputAction.CallbackContext context)
     {
         _moveInputs = context.ReadValue<Vector2>();
@@ -69,6 +71,17 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
+
+    public void EscInputCallback(InputAction.CallbackContext context)
+    {
+        if ( context.started)
+        {
+            /// OPEN WINDOW
+        }
+    }
+
+    ///
+
 
     private void SwitchSprite()
     {
