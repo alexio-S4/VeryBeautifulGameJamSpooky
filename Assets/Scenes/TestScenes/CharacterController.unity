@@ -198,6 +198,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &65740280 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3269790745990703179, guid: 284d200f5c95a374a810c57de3e849ca, type: 3}
+  m_PrefabInstance: {fileID: 2028637128298859726}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &65740282 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2699116386609615377, guid: 284d200f5c95a374a810c57de3e849ca, type: 3}
@@ -214,6 +219,7 @@ GameObject:
   - component: {fileID: 219178444}
   - component: {fileID: 219178446}
   - component: {fileID: 219178445}
+  - component: {fileID: 219178447}
   m_Layer: 5
   m_Name: BAR
   m_TagString: Untagged
@@ -280,6 +286,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219178443}
   m_CullTransparentMesh: 1
+--- !u!114 &219178447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219178443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7277bd863997074cb8a7b806ea7a788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FillBarUI
+  _images:
+  - {fileID: 1267226960}
+  - {fileID: 811851517}
 --- !u!1 &378680123
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,6 +376,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378680123}
   m_CullTransparentMesh: 1
+--- !u!1 &407868854 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4521382104151363523, guid: 50a710fadf061fc49a6f03b2e626165f, type: 3}
+  m_PrefabInstance: {fileID: 8365909230156814412}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &407868855 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4183889115297660173, guid: 50a710fadf061fc49a6f03b2e626165f, type: 3}
@@ -605,10 +631,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &643563362 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9106638823400568949, guid: 227170528b64a4c439f0eccaecdf32b4, type: 3}
+  m_PrefabInstance: {fileID: 3091148170839392590}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &643563364 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4847514373252603124, guid: 227170528b64a4c439f0eccaecdf32b4, type: 3}
   m_PrefabInstance: {fileID: 3091148170839392590}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &809863263 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1589244458068111507, guid: 5bba16548c805504db74178a9edb8d3b, type: 3}
+  m_PrefabInstance: {fileID: 1057504367006751486}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &809863265 stripped
 RectTransform:
@@ -1137,7 +1173,7 @@ GameObject:
   - component: {fileID: 1267226961}
   - component: {fileID: 1267226960}
   m_Layer: 5
-  m_Name: Bar_BG
+  m_Name: Bar_Empty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1453,8 +1489,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75034f072827f214ebe7df899987610e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GoalsManager
-  _goals: {fileID: 0}
-  _UIlocation: {fileID: 1281869908}
+  _candleGoalsNb: 0
+  _flowerGoalsNb: 0
+  _graveGoalsNb: 0
+  _leafGoalsNb: 0
+  _variants:
+  - _name: CandleGoal
+    _prefab: {fileID: 407868854}
+    _actionsToCheck: 3
+  - _name: FlowerGoal
+    _prefab: {fileID: 65740280}
+    _actionsToCheck: 3
+  - _name: GraveGoal
+    _prefab: {fileID: 809863263}
+    _actionsToCheck: 3
+  - _name: LeafGoal
+    _prefab: {fileID: 643563362}
+    _actionsToCheck: 3
+  _Uilocation: {fileID: 1281869908}
 --- !u!1 &1622352241
 GameObject:
   m_ObjectHideFlags: 0
@@ -2242,6 +2294,10 @@ PrefabInstance:
     - target: {fileID: 4521382104151363523, guid: 50a710fadf061fc49a6f03b2e626165f, type: 3}
       propertyPath: m_Name
       value: CandleGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8638143400687533711, guid: 50a710fadf061fc49a6f03b2e626165f, type: 3}
+      propertyPath: _phase
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

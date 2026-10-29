@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _moveInputs;
     private SpriteRenderer _spriteRenderer;
     private bool _wantToInteract = false;
-    private InteractUI _interactUI;
+    private FillBarUI _interactUI;
 
     private float _interactingTime; 
 
@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         if (_spriteRenderer == null)
         { _spriteRenderer = GetComponentInChildren<SpriteRenderer>(); }
 
-        if(_interactUI == null) { _interactUI = GetComponentInChildren<InteractUI>();}
+        if(_interactUI == null) { _interactUI = GetComponentInChildren<FillBarUI>();}
     }
 
     private void Update()
