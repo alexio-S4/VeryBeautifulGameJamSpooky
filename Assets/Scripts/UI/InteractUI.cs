@@ -6,8 +6,11 @@ public class InteractUI : MonoBehaviour
     [SerializeField] private Image[] _images;
     private void Awake()
     {
-        if (_images == null) { _images = GetComponentsInChildren<Image>(); }
+        if (_images == null)
+        { Debug.Log("Add images in inspector"); }
     }
+
+    private void Start() { Hide(); } //Initialize
 
     public void Show()
     {
