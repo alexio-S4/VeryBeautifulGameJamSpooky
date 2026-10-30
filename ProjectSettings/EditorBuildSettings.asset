@@ -8,5 +8,20 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Menu/MainMenuScene.unity
+    guid: 954faa46ff55e2749b7a9380f7dc9947
+  - enabled: 1
+    path: Assets/Scenes/TestScenes/CharacterController_FIXED.unity
+    guid: e6a07addd4a50ce469a26c33c7f5312f
+  - enabled: 1
+    path: Assets/Scenes/TestScenes/TestScene.unity
+    guid: 2c9d04bccf4c3ea41af869487780dac0
+  - enabled: 1
+    path: Assets/Scenes/TestScenes/CharacterController.unity
+    guid: 260f0ee91b3c2754fbbf49e5b804ab8e
+  - enabled: 1
+    path: Assets/Scenes/Menu/CreditsScene.unity
+    guid: e647a034486bf7c4cb59993333b7315a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
