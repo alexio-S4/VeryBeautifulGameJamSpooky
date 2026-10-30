@@ -11,6 +11,17 @@ public class InteractableObject : MonoBehaviour
     public GameObject promptUI;
     public string[] LinesToDisplay => linesToDisplay;
 
+    [SerializeField] private TaskObject _task;
+    public TaskObject Task => _task;
+
+    private void Awake()
+    {
+        if (_task == null)
+        {
+            _task = GetComponent<TaskObject>();
+        }
+    }
+
     void Start()
     {
         if (promptUI != null)
@@ -43,6 +54,7 @@ public class InteractableObject : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             PlayerMovement player = collision.GetComponent<PlayerMovement>();
+
             if(player != null)
             {
                 player.ClearCurrentInteractable();
@@ -57,10 +69,10 @@ public class InteractableObject : MonoBehaviour
 
     public void OnInteracted()
     {
-        if(GameManager.totalInteractionsCount < 1)
-        {
-            GameManager.totalInteractionsCount++;
-        }
+        //if(GameManager.totalInteractionsCount < 1)
+        //{
+        //    GameManager.totalInteractionsCount++;
+        //}
 
         if(promptUI != null)
         {

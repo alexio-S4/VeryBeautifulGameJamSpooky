@@ -34,8 +34,13 @@ public class GoalsManager : MonoBehaviour
     [SerializeField] private GoalVariants[] _variants;
     [SerializeField] private Transform _Uilocation;
 
-    // Utilisation d'une Liste pour stocker de façon 100% sûre les UI générées
-    private List<Goal> _activeGoals = new List<Goal>();
+    // Stockage des Objectifs 
+    [SerializeField] private List<Goal> _activeGoals = new List<Goal>();
+
+    //[Header("[UI SETTINGS]")]
+    //[SerializeField] private UIBarBehaviour _barBehaviour;
+
+    public Action<Goal> OnTaskComplete;
 
     private void Awake()
     {
@@ -68,19 +73,37 @@ public class GoalsManager : MonoBehaviour
         }
     }
 
+    public void ChangeGoalPhase(GoalType type)
+    {
+        foreach (Goal goal in _activeGoals)
+        {
+            if (goal._type == type && goal.Phase != GoalPhase.Checked)
+            {
+                goal.Phase = GoalPhase.Pause;
+            }
+        }
+    }
     public void AddProgress(GoalType type)
     {
-        foreach (Goal g in _activeGoals)
+        //Debug.Log("Try Add Progress");
+        foreach (Goal goal in _activeGoals)
         {
-            if (g._type == type && g.Phase != GoalPhase.Checked)
+            if (goal._type == type && goal.Phase != GoalPhase.Checked)
             {
-                g._actionsChecked++;
+                goal._actionsChecked++;
 
-                if (g._actionsChecked >= g.ActionsToCheck) g.Phase = GoalPhase.Checked;
-                else g.Phase = GoalPhase.InProgress;
+                //Debug.Log("TaskComplete +1");
+                OnTaskComplete?.Invoke(goal);
+
+                if (goal._actionsChecked >= goal.ActionsToCheck) goal.Phase = GoalPhase.Checked;
+                else goal.Phase = GoalPhase.InProgress;
 
                 break;
             }
         }
     }
+
+    
+
+
 }

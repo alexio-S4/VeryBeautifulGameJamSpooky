@@ -66,14 +66,15 @@ public class Goal : MonoBehaviour
 
     public void Initialize(int actionsToCheck)
     {
-        Debug.Log($"Try Initialize");
+        //Debug.Log($"Try Initialize");
         Phase = GoalPhase.None;
         _actionsToCheck = actionsToCheck;
     }
 
     private void UpdateGoalSprite(GoalPhase phase)
     {
-        Debug.Log("Try Update Sprite");
+        //Debug.Log("Try Update Sprite");
+
         switch (phase)
         {
             case GoalPhase.None:

@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 219178446}
   - component: {fileID: 219178445}
   - component: {fileID: 219178447}
+  - component: {fileID: 219178448}
   m_Layer: 5
   m_Name: BAR
   m_TagString: Untagged
@@ -288,9 +289,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7277bd863997074cb8a7b806ea7a788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FillBarUI
+  _playerRef: {fileID: 1077739554}
   _images:
   - {fileID: 1267226960}
   - {fileID: 811851517}
+--- !u!114 &219178448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219178443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b23f27bb7dfd8f45ac194c5fbad8b6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIBARcopy
+  _player: {fileID: 1077739554}
+  _progressBarTimer: 2
+  _fillSpeed: 2
 --- !u!1 &378680123
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,6 +520,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &545512558
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.7470224
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185034773578669754, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954084756960155365, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_Name
+      value: Flowers
+      objectReference: {fileID: 0}
+    - target: {fileID: 8454672018268176767, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: taskType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8454672018268176767, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: _playerRef
+      value: 
+      objectReference: {fileID: 1077739554}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
 --- !u!1 &576005107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,6 +1387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7277bd863997074cb8a7b806ea7a788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractUI
+  _playerRef: {fileID: 0}
   _images: []
 --- !u!1 &1267226958
 GameObject:
@@ -1577,7 +1664,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
   m_UseReflectionProbes: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 1
@@ -1616,9 +1703,9 @@ RectTransform:
   - {fileID: 576005108}
   m_Father: {fileID: 1650817332}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -960, y: 0}
   m_SizeDelta: {x: 1000, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1438190981
@@ -1728,29 +1815,38 @@ MonoBehaviour:
   _cutGoalsNb: 1
   _grassGoalsNb: 1
   _lightGoalsNb: 1
+  _currentGoal: {fileID: 0}
   _variants:
   - _name: CandleGoal
     _prefab: {fileID: 4521382104151363523, guid: 50a710fadf061fc49a6f03b2e626165f, type: 3}
     _actionsToCheck: 1
+    _type: 1
   - _name: FlowerGoal
     _prefab: {fileID: 3269790745990703179, guid: 284d200f5c95a374a810c57de3e849ca, type: 3}
     _actionsToCheck: 3
+    _type: 2
   - _name: GraveGoal
     _prefab: {fileID: 1589244458068111507, guid: 5bba16548c805504db74178a9edb8d3b, type: 3}
     _actionsToCheck: 1
+    _type: 3
   - _name: LeafGoal
     _prefab: {fileID: 9106638823400568949, guid: 227170528b64a4c439f0eccaecdf32b4, type: 3}
     _actionsToCheck: 2
+    _type: 4
   - _name: CutGoal
     _prefab: {fileID: 7490003430957909466, guid: b1ad465ee42746449958e3abba3490a9, type: 3}
     _actionsToCheck: 2
+    _type: 5
   - _name: GrassGoal
     _prefab: {fileID: 5373076238141495069, guid: 9647ab069f26ec3468e7f9b6ea18e1b2, type: 3}
     _actionsToCheck: 2
+    _type: 6
   - _name: LightGoal
     _prefab: {fileID: 4434346399168652692, guid: d3b2caf553211a14f9af0a79543764cd, type: 3}
     _actionsToCheck: 1
+    _type: 7
   _Uilocation: {fileID: 1281869908}
+  _activeGoals: []
 --- !u!1 &1622352241
 GameObject:
   m_ObjectHideFlags: 0
@@ -1826,6 +1922,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622352241}
   m_CullTransparentMesh: 1
+--- !u!1001 &1647214220
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.7470224
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185034773578669754, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954084756960155365, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_Name
+      value: Flowers (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8454672018268176767, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: taskType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8454672018268176767, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: _playerRef
+      value: 
+      objectReference: {fileID: 1077739554}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
 --- !u!1 &1650817331
 GameObject:
   m_ObjectHideFlags: 0
@@ -1960,6 +2125,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tombstone (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8454672018268176767, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: _playerRef
+      value: 
+      objectReference: {fileID: 1077739554}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2015,6 +2184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7277bd863997074cb8a7b806ea7a788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractUI
+  _playerRef: {fileID: 1077739554}
   _images:
   - {fileID: 1622352243}
   - {fileID: 1168897893}
@@ -2218,7 +2388,7 @@ Transform:
   - {fileID: 1585384641}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1985646086
+--- !u!1001 &1962140836
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -2228,11 +2398,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.4787529
+      value: -6.28
       objectReference: {fileID: 0}
     - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.0525
+      value: -3.7470224
       objectReference: {fileID: 0}
     - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2244,15 +2414,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1745225178740321611, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2266,10 +2436,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6185034773578669754, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 7954084756960155365, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
       propertyPath: m_Name
-      value: Tombstone
+      value: Flowers (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8454672018268176767, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: taskType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8454672018268176767, guid: 485698104d46db441bb32dd96d2e6a3f, type: 3}
+      propertyPath: _playerRef
+      value: 
+      objectReference: {fileID: 1077739554}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2286,4 +2468,6 @@ SceneRoots:
   - {fileID: 39009055}
   - {fileID: 819410201}
   - {fileID: 1684663456}
-  - {fileID: 1985646086}
+  - {fileID: 545512558}
+  - {fileID: 1647214220}
+  - {fileID: 1962140836}

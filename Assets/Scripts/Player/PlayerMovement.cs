@@ -23,13 +23,16 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
 
     [SerializeField] private InteractableObject _currentInteractable;
+    public InteractableObject CurrentInteractable => _currentInteractable;
+     
     private TaskObject _currentTask;
+    public TaskObject CurrentTask => _currentTask;
 
     private bool _wantToInteract = false;
      private InteractUI _interactUI;
     private float _interactingTime;
 
-
+    public Action<Goal> OnTaskComplete;
 
     private void Awake()
     {
@@ -80,8 +83,20 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("Show Dialogue");
                 _textSystem.DisplayText(_currentInteractable.linesToDisplay);
                 _currentInteractable.OnInteracted();
+                _wantToInteract = true;
+                DisplaynteractWheel();
+                GoalsManager.Instance.ChangeGoalPhase(_currentInteractable.Task.taskType);
+
             }
         }
+
+        if (context.canceled)
+        {
+            //Debug.Log("Interact canceled");
+            _wantToInteract = false;
+            _interactUI.Hide();
+        }
+
     }
 
     public void EscInputCallback(InputAction.CallbackContext context)
@@ -129,7 +144,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void Interact()
+    private void DisplaynteractWheel()
     {
         Debug.Log("Try interact");
         // If I can interact with...
@@ -156,25 +171,18 @@ public class PlayerMovement : MonoBehaviour
             {
                 _currentTask.CompleteTask();
                 _currentTask = null;
+
             }
         }
     }
 
-    public void SetCurrentTask(TaskObject task) { _currentTask = task; }
-    public void ClearCurrentTask() { _currentTask = null; }
-
-    public void TaskInputCallback(InputAction.CallbackContext context)
+    public void SetCurrentTask(TaskObject task) 
     {
-        if (context.started && _currentTask != null)
-        {
-            _wantToInteract = true;
-            Interact(); // Lance la roue de progression
-        }
-
-        if (context.canceled)
-        {
-            _wantToInteract = false;
-            _interactUI.Hide(); // Annule la roue si on relâche F
-        }
+        _currentTask = task;
     }
+    public void ClearCurrentTask() 
+    { 
+        _currentTask = null; 
+    }
+
 }
