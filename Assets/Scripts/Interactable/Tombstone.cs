@@ -21,7 +21,7 @@ public class Tombstone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame || Input.anyKeyDown)
         {
             if (textComponent.text == lines[index])
             {
