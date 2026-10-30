@@ -105,6 +105,16 @@
                     "interactions": "",
                     "initialStateCheck": false,
                     "priority": 0
+                },
+                {
+                    "name": "Task",
+                    "type": "Button",
+                    "id": "7b193ad5-8e06-4ec2-b847-4303e286be19",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
                 }
             ],
             "bindings": [
@@ -512,6 +522,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Interact1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ba3903da-cafa-4cbb-a367-4c2e0431d5b3",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Task",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "575e2334-d627-4744-b05c-ed8a27cedf05",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Task",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

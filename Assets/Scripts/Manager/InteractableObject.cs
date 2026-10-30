@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
+
     [Header("Contenu du texte")]
     [TextArea(3, 5)]
     public string[] linesToDisplay;
@@ -30,7 +31,7 @@ public class InteractableObject : MonoBehaviour
                 player.SetCurrentInteractable(this);
             }
 
-            if(promptUI != null && GameManager.totalInteractionsCount < 3)
+            if(promptUI != null && GameManager.totalInteractionsCount < 1)
             {
                 promptUI.SetActive(true);
             }
@@ -56,10 +57,10 @@ public class InteractableObject : MonoBehaviour
 
     public void OnInteracted()
     {
-        //if(GameManager.totalInteractionsCount < 3)
-        //{
-        //    GameManager.totalInteractionsCount++;
-        //}
+        if(GameManager.totalInteractionsCount < 1)
+        {
+            GameManager.totalInteractionsCount++;
+        }
 
         if(promptUI != null)
         {

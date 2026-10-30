@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
 
     [SerializeField] private InteractableObject _currentInteractable;
+    private TaskObject _currentTask;
 
     private bool _wantToInteract = false;
      private InteractUI _interactUI;
@@ -72,13 +73,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void InteractInputCallback(InputAction.CallbackContext context)
     {
-
         if (context.started)
         {
-            _wantToInteract = true;
-            Interact();
-            //Debug.Log("Started");
-
             if (_currentInteractable != null && _textSystem != null && !_textSystem.isTalking)
             {
                 Debug.Log("Show Dialogue");
@@ -86,14 +82,6 @@ public class PlayerMovement : MonoBehaviour
                 _currentInteractable.OnInteracted();
             }
         }
-
-        if (context.canceled)
-        {
-            Debug.Log("Interact canceled");
-            _wantToInteract = false;
-            _interactUI.Hide();
-        }
-
     }
 
     public void EscInputCallback(InputAction.CallbackContext context)
@@ -163,7 +151,30 @@ public class PlayerMovement : MonoBehaviour
             _interactingTime = 0f;
             _interactUI.Progress(0f);
             _interactUI.Hide();
+
+            if (_currentTask != null)
+            {
+                _currentTask.CompleteTask();
+                _currentTask = null;
+            }
         }
     }
 
+    public void SetCurrentTask(TaskObject task) { _currentTask = task; }
+    public void ClearCurrentTask() { _currentTask = null; }
+
+    public void TaskInputCallback(InputAction.CallbackContext context)
+    {
+        if (context.started && _currentTask != null)
+        {
+            _wantToInteract = true;
+            Interact(); // Lance la roue de progression
+        }
+
+        if (context.canceled)
+        {
+            _wantToInteract = false;
+            _interactUI.Hide(); // Annule la roue si on relâche F
+        }
+    }
 }
