@@ -88,7 +88,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.started)
         {
-            /// OPEN WINDOW
+            if (PauseManager.Instance != null)
+            {
+                PauseManager.Instance.TogglePause();
+            }
         }
     }
 
