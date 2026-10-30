@@ -20,6 +20,7 @@ public class InteractableObject : MonoBehaviour
         {
             _task = GetComponent<TaskObject>();
         }
+
     }
 
     void Start()
