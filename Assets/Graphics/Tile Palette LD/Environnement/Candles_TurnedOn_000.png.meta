@@ -116,6 +116,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -123,12 +136,12 @@ TextureImporter:
       name: Candles_TurnedOn_000_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 81
-        width: 23
-        height: 41
+        x: 0
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -141,143 +154,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Candles_TurnedOn_000_1
-      rect:
-        serializedVersion: 2
-        x: 28
-        y: 75
-        width: 21
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: be3a2fb4ec15266c0800000000000000
-      internalID: -4151665960002870293
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Candles_TurnedOn_000_2
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 88
-        width: 16
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 91f941cb7af7f4760800000000000000
-      internalID: 7444309067458453273
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Candles_TurnedOn_000_3
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 86
-        width: 17
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6768208b321c6a7b0800000000000000
-      internalID: -5213267159479581066
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Candles_TurnedOn_000_4
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 1
-        width: 39
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7797d1f12122e0a50800000000000000
-      internalID: 6489161574314244471
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Candles_TurnedOn_000_5
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 41
-        width: 23
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e613efb5b18c12520800000000000000
-      internalID: 2675639673467842926
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Candles_TurnedOn_000_6
-      rect:
-        serializedVersion: 2
-        x: 109
-        y: 1
-        width: 17
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0b9f82ed4902337b0800000000000000
-      internalID: -5245813317202019920
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3f65476e073d6aa44b14d0fa5c758adc
     internalID: 0
     vertices: []
     indices: 
@@ -285,15 +166,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Candles_TurnedOn_000_0: 7632758444514109398
-      Candles_TurnedOn_000_1: -4151665960002870293
-      Candles_TurnedOn_000_2: 7444309067458453273
-      Candles_TurnedOn_000_3: -5213267159479581066
-      Candles_TurnedOn_000_4: 6489161574314244471
-      Candles_TurnedOn_000_5: 2675639673467842926
-      Candles_TurnedOn_000_6: -5245813317202019920
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
