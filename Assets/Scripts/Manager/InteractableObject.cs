@@ -23,7 +23,7 @@ public class InteractableObject : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("capte player");
+            //Debug.Log("capte player");
             PlayerMovement player = collision.GetComponent<PlayerMovement>();
 
             if (player != null)
