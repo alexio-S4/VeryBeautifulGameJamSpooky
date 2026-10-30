@@ -37,6 +37,8 @@ public class Tombstone : MonoBehaviour
 
     public void DisplayText(string[] newLines)
     {
+        SoundManager.instance.playRandomDialogue();
+
         lines = newLines;
         gameObject.SetActive(true);
         isTalking = true;
@@ -48,7 +50,6 @@ public class Tombstone : MonoBehaviour
 
     IEnumerator TypeLine()
     {
-        SoundManager.instance.playRandomDialogue();
         foreach (char c in lines[index].ToCharArray())
         {
             textComponent.text += c;
@@ -58,6 +59,7 @@ public class Tombstone : MonoBehaviour
 
     void NextLine()
     {
+
         if (index < lines.Length - 1)
         {
             index ++;

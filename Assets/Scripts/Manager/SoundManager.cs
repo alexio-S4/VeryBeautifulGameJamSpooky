@@ -91,7 +91,7 @@ public class SoundManager : MonoBehaviour
 
     public void playRandomDialogue()
     {
-        int rnd = Random.Range(1, 2);
+        int rnd = Random.Range(1, 3);
 
         switch (rnd)
         {
