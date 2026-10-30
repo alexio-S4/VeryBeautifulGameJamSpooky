@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("TEXT SYSTEM")]
     [SerializeField] private Tombstone _textSystem;
 
+
     private Rigidbody2D _rigidbody;
     private Vector2 _moveInputs;
     private SpriteRenderer _spriteRenderer;

@@ -136,8 +136,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 5994
-        height: 3601
+        width: 5066
+        height: 2504
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,7 +156,7 @@ TextureImporter:
       name: ENJAM_logo_test_V2_1
       rect:
         serializedVersion: 2
-        x: 5989
+        x: 5061
         y: 267
         width: 6
         height: 10
