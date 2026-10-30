@@ -352,6 +352,7 @@ MonoBehaviour:
   - Hello
   - World
   promptUI: {fileID: 2916521534741806123}
+  _task: {fileID: 0}
 --- !u!61 &4965580426683654847
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -410,6 +411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae7662e6db21c0408f9500fb6e996b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TaskObject
-  taskType: 3
+  _playerRef: {fileID: 0}
+  taskType: 2
   dirtySprite: {fileID: 3407572862762948867, guid: 1ee225a939664834994aee492001a3bb, type: 3}
   cleanSprite: {fileID: 5711544432380875350, guid: 8967be3b0c5a7854dbfb927f5748e688, type: 3}
