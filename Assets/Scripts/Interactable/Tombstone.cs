@@ -43,10 +43,12 @@ public class Tombstone : MonoBehaviour
         index = 0;
         textComponent.text = string.Empty;
         StartCoroutine(TypeLine());
+
     }
 
     IEnumerator TypeLine()
     {
+        SoundManager.instance.playRandomDialogue();
         foreach (char c in lines[index].ToCharArray())
         {
             textComponent.text += c;

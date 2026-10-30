@@ -5,7 +5,7 @@ public class SoundManager : MonoBehaviour
     public static SoundManager instance;
 
     [SerializeField] private AudioSource soundFXObject;
-    [SerializeField] private AudioSource musicAudioSource;
+    [SerializeField] private AudioSource cameraAudioSource;
 
     [HideInInspector] public float masterVolume = 1f;
     [HideInInspector] public float musicVolume = 1f;
@@ -19,6 +19,8 @@ public class SoundManager : MonoBehaviour
     [SerializeField] public AudioClip _movingGhost;
     [SerializeField] public AudioClip _softWind;
     [SerializeField] public AudioClip _crowsSound;
+
+    
 
     private void Awake()
     {
@@ -64,9 +66,9 @@ public class SoundManager : MonoBehaviour
 
     private void UpdateMusicVolume()
     {
-        if (musicAudioSource != null)
+        if (cameraAudioSource != null)
         {
-            musicAudioSource.volume = musicVolume * masterVolume;
+            cameraAudioSource.volume = musicVolume * masterVolume;
         }
     }
 
@@ -84,5 +86,21 @@ public class SoundManager : MonoBehaviour
         PlayerPrefs.SetFloat("MusicVolume", musicVolume);
         PlayerPrefs.SetFloat("SFXVolume", sfxVolume);
         PlayerPrefs.Save();
+    }
+
+
+    public void playRandomDialogue()
+    {
+        int rnd = Random.Range(1, 2);
+
+        switch (rnd)
+        {
+            case 1:
+                cameraAudioSource.PlayOneShot(_DialogueSound1);
+                break;
+            case 2:
+                cameraAudioSource.PlayOneShot(_DialogueSound2);
+                break;
+        }
     }
 }
