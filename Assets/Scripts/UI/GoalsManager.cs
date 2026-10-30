@@ -20,6 +20,12 @@ public class GoalsManager : MonoBehaviour
     [SerializeField] private int _grassGoalsNb;
     [SerializeField] private int _lightGoalsNb;
 
+    [Header("[CURRENT GOAL]")]
+    [SerializeField] private Goal _currentGoal; 
+
+    //[Header("[GOALS]")]
+    //[SerializeField] private GameObject[] _goalsGenerated;
+
     [Header("[GENERAL SETTINGS]")]
     [SerializeField] private GoalVariants[] _variants;
 
