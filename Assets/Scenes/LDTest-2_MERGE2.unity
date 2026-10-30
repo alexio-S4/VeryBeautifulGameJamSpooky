@@ -2973,6 +2973,13 @@ MonoBehaviour:
   masterVolume: 1
   musicVolume: 1
   sfxVolume: 1
+  _UITriggerSound: {fileID: 8300000, guid: 4415a9d37d73cf149bc69bdc1b96d8bd, type: 3}
+  _DialogueSound1: {fileID: 8300000, guid: fba49374aeb33a04a89962e5519c85db, type: 3}
+  _DialogueSound2: {fileID: 8300000, guid: 3e43c90d358addd4583ec113435a208a, type: 3}
+  _ItemTakenSound: {fileID: 8300000, guid: dfb352514670ddc49b0a07cc4a382337, type: 3}
+  _movingGhost: {fileID: 8300000, guid: 5b8dc726ed908304c819d458dae479c8, type: 3}
+  _softWind: {fileID: 8300000, guid: 9141f2fb327e14c4c8d55062c7b912d8, type: 3}
+  _crowsSound: {fileID: 8300000, guid: 250f8bf5e1183d548b6cc945a877e38a, type: 3}
 --- !u!1 &201406469
 GameObject:
   m_ObjectHideFlags: 0

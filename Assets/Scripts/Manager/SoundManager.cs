@@ -11,6 +11,15 @@ public class SoundManager : MonoBehaviour
     [HideInInspector] public float musicVolume = 1f;
     [HideInInspector] public float sfxVolume = 1f;
 
+    [Header("[SOUNDS ASSETS]")]
+    [SerializeField] public AudioClip _UITriggerSound;
+    [SerializeField] public AudioClip _DialogueSound1;
+    [SerializeField] public AudioClip _DialogueSound2;
+    [SerializeField] public AudioClip _ItemTakenSound;
+    [SerializeField] public AudioClip _movingGhost;
+    [SerializeField] public AudioClip _softWind;
+    [SerializeField] public AudioClip _crowsSound;
+
     private void Awake()
     {
         if (instance == null)
