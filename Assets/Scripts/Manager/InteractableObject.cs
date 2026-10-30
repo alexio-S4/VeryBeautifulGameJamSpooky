@@ -69,12 +69,12 @@ public class InteractableObject : MonoBehaviour
 
     public void OnInteracted()
     {
-        //if(GameManager.totalInteractionsCount < 1)
-        //{
-        //    GameManager.totalInteractionsCount++;
-        //}
+        if (GameManager.totalInteractionsCount < 1)
+        {
+            GameManager.totalInteractionsCount++;
+        }
 
-        if(promptUI != null)
+        if (promptUI != null)
         {
             promptUI.SetActive(false);
         }

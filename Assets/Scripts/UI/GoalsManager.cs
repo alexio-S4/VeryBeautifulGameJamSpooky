@@ -104,6 +104,11 @@ public class GoalsManager : MonoBehaviour
     }
 
     
-
+    //public void AreAllGoalsChecked()
+    //{
+    //    foreach (var goal in _activeGoals)
+    //    {
+    //    }
+    //}
 
 }
